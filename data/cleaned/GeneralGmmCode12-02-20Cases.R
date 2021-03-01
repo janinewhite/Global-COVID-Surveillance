@@ -108,7 +108,7 @@ while(n.region <= length(regions)) {                                            
                               Trend + I(Trend^2) + lag(Pos.Rate,8:11) | lag(Pos.Rate,2:3),data=p.dta,                #
                               effect="individual",model="onestep", transformation="ld",fsm="I",na.action=omit,       #
                               digits=10,robust=TRUE)                                                                 #
-      sink(paste(regions[n.region],"- GMM -",Sys.Date(),".txt"))                                                     #
+      sink(paste(regions[n.region],"- GMM-",Sys.Date(),".txt"))                                                     #
       print(summary(gmm0))                                                                                           #
       sink()                                                                                                         #
                                                                                                                      #
@@ -117,7 +117,7 @@ while(n.region <= length(regions)) {                                            
                               Trend + I(Trend^2) + lag(Pos.Rate,8:15) | lag(Pos.Rate,2:3),data=p.dta,                #
                               effect="individual",model="onestep",transformation="ld",fsm="I",na.action=omit,        #
                               digits=10,robust=TRUE)                                                                 #
-      sink(paste(regions[n.region],"- GMM -",Sys.Date(),".txt"))                                                     #
+      sink(paste(regions[n.region],"- GMM-",Sys.Date(),".txt"))                                                     #
             print(summary(gmm0))                                                                                     #
       sink()                                                                                                         #
     } else break                                                                                                     #
@@ -316,7 +316,7 @@ while(n.region <= length(regions)) {                                            
                               Cum.Tests + Weekend | Trend + I(Trend^2) + lag(Pos.Rate,8:11) | lag(Pos.Rate,2:3),     #
                               data=p.dta,effect="individual",model="onestep", transformation="ld",fsm="I",           #
                               na.action=omit,digits=10,robust=TRUE)                                                  #
-      sink(paste("United States - GMM -",Sys.Date(),".txt"))                                                         #
+      sink(paste("United States - GMM-",Sys.Date(),".txt"))                                                         #
       print(summary(gmm0))                                                                                           # Print results of DPD estimation
       sink()                                                                                                         #
 #                                                                                                                    #
