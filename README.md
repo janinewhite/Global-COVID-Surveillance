@@ -20,11 +20,11 @@ This is the procedure to complete the daily and weekly updates of GASSP charts.
 
 ## Procedure
 
+Sundays perform the weekly and daily updates.  All other days perform only the daily update.
+
+### Weekly Update (Sundays)
 1) Open Jupyter Notebook.
 2) Navigate to Documents/GitHub/Global-COVID-Surveillance/scripts.
-************************************************
-All days except Sundays skip to step 20
-************************************************
 3) Open Cleaned Input 2.ipynb.
 4) Update last_saturday.
 5) Update last_sunday.
@@ -42,7 +42,7 @@ All days except Sundays skip to step 20
 17) Open Daily Update 2.
 18) Update file_date in Daily Update 2 to equal the date of the files.
 19) Save Daily Update 2.
-************************************************
+### Daily Update (Every Day)
 20) Open Jupyter Notebook.
 21) Navigate to Documents/GitHub/Global-COVID-Surveillance/scripts
 22) Open Daily Update 2.
