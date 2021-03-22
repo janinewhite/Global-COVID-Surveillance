@@ -8,7 +8,7 @@ library(plm)                                                                    
 ######################################################################################################################
 # Read Primary Data                                                                                                  #
                                                                                                                      #
-full.dta <- read.csv(file="D:/Repositories/Global-COVID-Surveillance/data/cleaned/daily_raw_input.csv")                                                                     # Read data from pgmm_input_recalc_totals.csv file
+full.dta <- read.csv(file="C:/Users/jwg4880/Documents/GitHub/Global-COVID-Surveillance/data/cleaned/daily_raw_input.csv")                                                                     # Read data from pgmm_input_recalc_totals.csv file
 regions <- as.character(unique(full.dta$Region))                                                                     # Create list of regions
                                                                                                                      #
 ######################################################################################################################
