@@ -123,3 +123,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+data/cleaned/all_combined.xlsx
+Tableau/Logs/log.txt
+Tableau/Logs/log_bk.txt
+Tableau/Logs/log.txt
+Tableau/Logs/log.txt
+Tableau/Logs/log.txt
+data/cleaned/all_raw_input.csv
