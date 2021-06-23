@@ -1,0 +1,39 @@
+Oneway (individual) effect One step model
+
+Call:
+pgmm(formula = Pos.Rate ~ lag(Pos.Rate, c(1, 7)) + RecentWeek + 
+    lag(Recent.PosRate, c(1, 7)) + Weekend | Trend + I(Trend^2) + 
+    lag(Pos.Rate, 8:11) | lag(Pos.Rate, 2:3), data = p.dta, na.action = omit, 
+    effect = "individual", model = "onestep", transformation = "ld", 
+    fsm = "I", digits = 10, robust = TRUE)
+
+Balanced Panel: n = 8, T = 62, N = 496
+
+Number of Observations Used: 872
+
+Residuals:
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max. 
+-247.26227   -0.59033    0.08917    0.40446    0.98012  242.05331 
+
+Coefficients:
+                                Estimate Std. Error  z-value  Pr(>|z|)
+lag(Pos.Rate, c(1, 7))1        0.6572846  0.0084327  77.9447 < 2.2e-16
+lag(Pos.Rate, c(1, 7))7        0.3333695  0.0086398  38.5853 < 2.2e-16
+RecentWeek                    -0.3900577  0.8643034  -0.4513    0.6518
+lag(Recent.PosRate, c(1, 7))1 -0.2674298  0.0181530 -14.7320 < 2.2e-16
+lag(Recent.PosRate, c(1, 7))7  0.1411373  0.0302430   4.6668  3.06e-06
+Weekend                       -0.2146537  0.2139431  -1.0033    0.3157
+                                 
+lag(Pos.Rate, c(1, 7))1       ***
+lag(Pos.Rate, c(1, 7))7       ***
+RecentWeek                       
+lag(Recent.PosRate, c(1, 7))1 ***
+lag(Recent.PosRate, c(1, 7))7 ***
+Weekend                          
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Sargan test: chisq(513) = 8 (p-value = 1)
+Autocorrelation test (1): normal = -1.042064 (p-value = 0.29738)
+Autocorrelation test (2): normal = 1.082603 (p-value = 0.27898)
+Wald test for coefficients: chisq(6) = 222862851 (p-value = < 2.22e-16)
